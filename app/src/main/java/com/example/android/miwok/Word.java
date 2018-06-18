@@ -30,6 +30,9 @@ public class Word {
     /** Image resource ID for the word */
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
+    /** Image resource ID for the word */
+    private int mAudioResourceId;
+
     /** Constant value that represents no image was provided for this word */
     private static final int NO_IMAGE_PROVIDED = -1;
 
@@ -54,10 +57,19 @@ public class Word {
      * @param imageResourceId is the drawable resource ID for the image associated with the word
      *
      */
+
     public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+
+    }
+
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceID) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mImageResourceId = imageResourceId;
+        mAudioResourceId = audioResourceID;
     }
 
     /**
@@ -81,6 +93,9 @@ public class Word {
         return mImageResourceId;
     }
 
+    public int getAudioResourceId() {
+        return mAudioResourceId;
+    }
     /**
      * Returns whether or not there is an image for this word.
      */
