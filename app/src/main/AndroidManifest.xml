@@ -11,7 +11,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.miwok">
+    package="com.example.android.tourguide">
 
     <application
         android:allowBackup="true"
@@ -19,47 +19,47 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.android.tourguide.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".NumbersActivity"
-            android:label="@string/category_numbers"
-            android:parentActivityName=".MainActivity">
+            android:name="com.example.android.tourguide.BikeActivity"
+            android:label="@string/bike_path"
+            android:parentActivityName="com.example.android.tourguide.MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value="com.example.android.tourguide.MainActivity"/>
         </activity>
         <activity
-            android:name=".FamilyActivity"
-            android:label="@string/category_family"
-            android:parentActivityName=".MainActivity">
+            android:name="com.example.android.tourguide.CatsActivity"
+            android:label="@string/cats"
+            android:parentActivityName="com.example.android.tourguide.MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value="com.example.android.tourguide.MainActivity"/>
         </activity>
         <activity
-            android:name=".ColorsActivity"
-            android:label="@string/category_colors"
-            android:parentActivityName=".MainActivity">
+            android:name="com.example.android.tourguide.MuseumsActivity"
+            android:label="@string/museums"
+            android:parentActivityName="com.example.android.tourguide.MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value="com.example.android.tourguide.MainActivity"/>
         </activity>
         <activity
-            android:name=".PhrasesActivity"
-            android:label="@string/category_phrases"
-            android:parentActivityName=".MainActivity">
+            android:name="com.example.android.tourguide.LibrariesActivity"
+            android:label="@string/libraries"
+            android:parentActivityName="com.example.android.tourguide.MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value="com.example.android.tourguide.MainActivity"/>
         </activity>
     </application>
 

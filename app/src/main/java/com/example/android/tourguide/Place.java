@@ -13,19 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.miwok;
+package com.example.android.tourguide;
 
 /**
- * {@link Word} represents a vocabulary word that the user wants to learn.
- * It contains a default translation, a Miwok translation, and an image for that word.
+ * {@link Place} represents a place the user wants to learn about.
+ * It contains the name of the place and a short description.
  */
-public class Word {
+public class Place {
 
-    /** Default translation for the word */
-    private String mDefaultTranslation;
+    /** Description of the place */
+    private String mDescriptionOfPlace;
 
-    /** Miwok translation for the word */
-    private String mMiwokTranslation;
+    /** The name of the place */
+    private String mNameOfPlace;
 
     /** Image resource ID for the word */
     private int mImageResourceId = NO_IMAGE_PROVIDED;
@@ -37,48 +37,48 @@ public class Word {
     private static final int NO_IMAGE_PROVIDED = -1;
 
     /**
-     * Create a new Word object.
+     * Create a new Place object.
      *
-     * @param defaultTranslation is the word in a language that the user is already familiar with
-     *                           (such as English)
-     * @param miwokTranslation is the word in the Miwok language
+     * @param descriptionOfPlace What the place is like
+     *
+     * @param nameOfPlace the name of the place
      */
-    public Word(String defaultTranslation, String miwokTranslation, int audioResourceID) {
-        mDefaultTranslation = defaultTranslation;
-        mMiwokTranslation = miwokTranslation;
+    public Place(String descriptionOfPlace, String nameOfPlace, int audioResourceID) {
+        mDescriptionOfPlace = descriptionOfPlace;
+        mNameOfPlace = nameOfPlace;
         mAudioResourceId = audioResourceID;
     }
 
     /**
-     * Create a new Word object.
+     * Create a new Place object.
      *
-     * @param defaultTranslation is the word in a language that the user is already familiar with
-     *                           (such as English)
-     * @param miwokTranslation is the word in the Miwok language
+     * @param defaultDescription is a description of the pace
+     *
+     * @param nameOfPlace is the name of the place
      * @param imageResourceId is the drawable resource ID for the image associated with the word
      *
      */
 
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceID) {
-        mDefaultTranslation = defaultTranslation;
-        mMiwokTranslation = miwokTranslation;
+    public Place(String defaultDescription, String nameOfPlace, int imageResourceId, int audioResourceID) {
+        mDescriptionOfPlace = defaultDescription;
+        mNameOfPlace = nameOfPlace;
         mImageResourceId = imageResourceId;
         mAudioResourceId = audioResourceID;
     }
 
     /**
-     * Get the default translation of the word.
+     * Get the description of place
      */
-    public String getDefaultTranslation() {
-        return mDefaultTranslation;
+    public String getDescriptionOfPlace() {
+        return mDescriptionOfPlace;
     }
 
     /**
-     * Get the Miwok translation of the word.
+     * Get the name of the place.
      */
-    public String getMiwokTranslation() {
-        return mMiwokTranslation;
+    public String getNameOfPlace() {
+        return mNameOfPlace;
     }
 
     /**
@@ -92,7 +92,7 @@ public class Word {
         return mAudioResourceId;
     }
     /**
-     * Returns whether or not there is an image for this word.
+     * Returns whether or not there is an image for this place.
      */
     public boolean hasImage() {
         return mImageResourceId != NO_IMAGE_PROVIDED;
@@ -100,9 +100,9 @@ public class Word {
 
     @Override
     public String toString() {
-        return "Word{" +
-                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
-                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+        return "Place{" +
+                "mDescriptionOfPlace='" + mDescriptionOfPlace + '\'' +
+                ", mNameOfPlace='" + mNameOfPlace + '\'' +
                 ", mImageResourceId=" + mImageResourceId +
                 ", mAudioResourceId=" + mAudioResourceId +
                 '}';

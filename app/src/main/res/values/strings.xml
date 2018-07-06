@@ -14,20 +14,20 @@
 -->
 <resources>
     <!-- Title for the application. [CHAR LIMIT=12] -->
-    <string name="app_name">Miwok</string>
+    <string name="app_name">Tour Guide: Mars</string>
 
     <!-- Category name for phrases [CHAR LIMIT=20] -->
-    <string name="category_phrases">Phrases</string>
+    <string name="libraries">Libraries of MARS!!</string>
 
-    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
-    <string name="category_colors">Colors</string>
+    <!-- Category name for the vocabulary places for colors [CHAR LIMIT=20] -->
+    <string name="museums">Museums of Mars</string>
 
-    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
-    <string name="category_numbers">Numbers</string>
+    <!-- Category name for the vocabulary places for numbers [CHAR LIMIT=20] -->
+    <string name="bike_path">Bike paths of MARS!!</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Category name for the vocabulary places for family members [CHAR LIMIT=20] -->
+    <string name="hello_blank_fragment">CAts of MArs!!</string>
 
-    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
-    <string name="category_family">Family</string>
+    <!-- Category name for the vocabulary places for family members [CHAR LIMIT=20] -->
+    <string name="cats">CAts of MArs!!</string>
 </resources>

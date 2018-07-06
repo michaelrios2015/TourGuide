@@ -1,10 +1,9 @@
-package com.example.android.miwok;
+package com.example.android.tourguide;
 
 
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 /**
  * {@link Fragment} that displays a list of number vocabulary words.
  */
-public class PhrasesFragment extends Fragment {
+public class LibrariesFragment extends Fragment {
 
     /** Handles playback of all the sound files */
     private MediaPlayer mMediaPlayer;
@@ -67,7 +66,7 @@ public class PhrasesFragment extends Fragment {
         }
     };
 
-    public PhrasesFragment() {
+    public LibrariesFragment() {
         // Required empty public constructor
     }
 
@@ -79,33 +78,33 @@ public class PhrasesFragment extends Fragment {
         // Create and setup the {@link AudioManager} to request audio focus
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
-        // Create a list of words
-        final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("Where are you going?", "minto wuksus",
+        // Create a list of places
+        final ArrayList<Place> places = new ArrayList<Place>();
+        places.add(new Place("only dogs?", "Library of Cats",
                 R.raw.phrase_where_are_you_going));
-        words.add(new Word("What is your name?", "tinnә oyaase'nә",
+        places.add(new Place("Meta?", "Library of Libraries",
                 R.raw.phrase_what_is_your_name));
-        words.add(new Word("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
-        words.add(new Word("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
-        words.add(new Word("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
-        words.add(new Word("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
-        words.add(new Word("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
-        words.add(new Word("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
-        words.add(new Word("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
-        words.add(new Word("Come here.", "әnni'nem", R.raw.phrase_come_here));
+        places.add(new Place("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
+        places.add(new Place("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
+        places.add(new Place("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
+        places.add(new Place("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
+        places.add(new Place("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
+        places.add(new Place("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
+        places.add(new Place("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
+        places.add(new Place("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
 
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_phrases);
+        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.category_phrases);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // word_list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // Make the {@link ListView} use the {@link PlaceAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Place} in the list.
         listView.setAdapter(adapter);
 
         // Set a click listener to play the audio when the list item is clicked on
@@ -116,8 +115,8 @@ public class PhrasesFragment extends Fragment {
                 // play a different sound file
                 releaseMediaPlayer();
 
-                // Get the {@link Word} object at the given position the user clicked on
-                Word word = words.get(position);
+                // Get the {@link Place} object at the given position the user clicked on
+                Place place = places.get(position);
 
                 // Request audio focus so in order to play the audio file. The app needs to play a
                 // short audio file, so we will request audio focus with a short amount of time
@@ -129,8 +128,8 @@ public class PhrasesFragment extends Fragment {
                     // We have audio focus now.
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
-                    // with the current word
-                    mMediaPlayer = MediaPlayer.create(getActivity(), word.getAudioResourceId());
+                    // with the current place
+                    mMediaPlayer = MediaPlayer.create(getActivity(), place.getAudioResourceId());
 
                     // Start the audio file
                     mMediaPlayer.start();

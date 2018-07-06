@@ -1,10 +1,9 @@
-package com.example.android.miwok;
+package com.example.android.tourguide;
 
 
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 /**
  * {@link Fragment} that displays a list of number vocabulary words.
  */
-public class FamilyFragment extends Fragment {
+public class MuseumsFragment extends Fragment {
 
     /** Handles playback of all the sound files */
     private MediaPlayer mMediaPlayer;
@@ -67,7 +66,7 @@ public class FamilyFragment extends Fragment {
         }
     };
 
-    public FamilyFragment() {
+    public MuseumsFragment() {
         // Required empty public constructor
     }
 
@@ -79,37 +78,32 @@ public class FamilyFragment extends Fragment {
         // Create and setup the {@link AudioManager} to request audio focus
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
-        // Create a list of words
-        final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("father", "әpә", R.drawable.family_father, R.raw.family_father));
-        words.add(new Word("mother", "әṭa", R.drawable.family_mother, R.raw.family_mother));
-        words.add(new Word("son", "angsi", R.drawable.family_son, R.raw.family_son));
-        words.add(new Word("daughter", "tune", R.drawable.family_daughter, R.raw.family_daughter));
-        words.add(new Word("older brother", "taachi", R.drawable.family_older_brother,
-                R.raw.family_older_brother));
-        words.add(new Word("younger brother", "chalitti", R.drawable.family_younger_brother,
-                R.raw.family_younger_brother));
-        words.add(new Word("older sister", "teṭe", R.drawable.family_older_sister,
-                R.raw.family_older_sister));
-        words.add(new Word("younger sister", "kolliti", R.drawable.family_younger_sister,
-                R.raw.family_younger_sister));
-        words.add(new Word("grandmother ", "ama", R.drawable.family_grandmother,
-                R.raw.family_grandmother));
-        words.add(new Word("grandfather", "paapa", R.drawable.family_grandfather,
-                R.raw.family_grandfather));
+        // Create a list of places
+        // Create a list of places
+        // Create a list of places
+        final ArrayList<Place> places = new ArrayList<Place>();
+        places.add(new Place("it's red", "The red Museum", R.drawable.color_red, R.raw.color_red));
+        places.add(new Place("it's better than red", "The dead museum", R.drawable.color_mustard_yellow,
+                R.raw.color_mustard_yellow));
+        places.add(new Place("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow,
+                R.raw.color_dusty_yellow));
+        places.add(new Place("green", "chokokki", R.drawable.color_green, R.raw.color_green));
+        places.add(new Place("brown", "ṭakaakki", R.drawable.color_brown, R.raw.color_brown));
+        places.add(new Place("gray", "ṭopoppi", R.drawable.color_gray, R.raw.color_gray));
+        places.add(new Place("black", "kululli", R.drawable.color_black, R.raw.color_black));
+        places.add(new Place("white", "kelelli", R.drawable.color_white, R.raw.color_white));
 
-
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_family);
+        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.category_colors);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // word_list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // Make the {@link ListView} use the {@link PlaceAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Place} in the list.
         listView.setAdapter(adapter);
 
         // Set a click listener to play the audio when the list item is clicked on
@@ -120,8 +114,8 @@ public class FamilyFragment extends Fragment {
                 // play a different sound file
                 releaseMediaPlayer();
 
-                // Get the {@link Word} object at the given position the user clicked on
-                Word word = words.get(position);
+                // Get the {@link Place} object at the given position the user clicked on
+                Place place = places.get(position);
 
                 // Request audio focus so in order to play the audio file. The app needs to play a
                 // short audio file, so we will request audio focus with a short amount of time
@@ -133,8 +127,8 @@ public class FamilyFragment extends Fragment {
                     // We have audio focus now.
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
-                    // with the current word
-                    mMediaPlayer = MediaPlayer.create(getActivity(), word.getAudioResourceId());
+                    // with the current place
+                    mMediaPlayer = MediaPlayer.create(getActivity(), place.getAudioResourceId());
 
                     // Start the audio file
                     mMediaPlayer.start();
@@ -179,6 +173,3 @@ public class FamilyFragment extends Fragment {
         }
     }
 }
-
-
-

@@ -1,4 +1,4 @@
-package com.example.android.miwok;
+package com.example.android.tourguide;
 
 
 import android.content.Context;
@@ -32,13 +32,13 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new NumbersFragment();
+            return new BikeFragment();
         } else if (position == 1) {
-            return new FamilyFragment();
+            return new CatsFragment();
         } else if (position == 2) {
-            return new ColorsFragment();
+            return new MuseumsFragment();
         } else {
-            return new PhrasesFragment();
+            return new LibrariesFragment();
         }
     }
 
@@ -50,16 +50,18 @@ public class CategoryAdapter extends FragmentPagerAdapter {
         return 4;
     }
 
+
+    // gets tab title
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return mContext.getString(R.string.category_numbers);
+            return mContext.getString(R.string.bike_path);
         } else if (position == 1) {
-            return mContext.getString(R.string.category_family);
+            return mContext.getString(R.string.cats);
         } else if (position == 2) {
-            return mContext.getString(R.string.category_colors);
+            return mContext.getString(R.string.museums);
         } else {
-            return mContext.getString(R.string.category_phrases);
+            return mContext.getString(R.string.libraries);
         }
     }
 }

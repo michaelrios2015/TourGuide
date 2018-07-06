@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.miwok;
+package com.example.android.tourguide;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
@@ -27,23 +27,23 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * {@link WordAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
- * based on a data source, which is a list of {@link Word} objects.
+ * {@link PlaceAdapter} is an {@link ArrayAdapter} that can provide the layout for each list item
+ * based on a data source, which is a list of {@link Place} objects.
  */
-public class WordAdapter extends ArrayAdapter<Word>  {
+public class PlaceAdapter extends ArrayAdapter<Place>  {
 
     /** Resource ID for the background color for this list of words */
     private int mColorResourceId;
 
     /**
-     * Create a new {@link WordAdapter} object.
+     * Create a new {@link PlaceAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
-     * @param words is the list of {@link Word}s to be displayed.
-     * @param colorResourceId is the resource ID for the background color for this list of words
+     * @param places is the list of {@link Place}s to be displayed.
+     * @param colorResourceId is the resource ID for the background color for this list of places
      */
-    public WordAdapter(Context context, ArrayList<Word> words, int colorResourceId) {
-        super(context, 0, words);
+    public PlaceAdapter(Context context, ArrayList<Place> places, int colorResourceId) {
+        super(context, 0, places);
         mColorResourceId = colorResourceId;
     }
 
@@ -56,27 +56,27 @@ public class WordAdapter extends ArrayAdapter<Word>  {
                     R.layout.list_item, parent, false);
         }
 
-        // Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
+        // Get the {@link Place} object located at this position in the list
+        Place currentPlace = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID miwok_text_view.
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
-        // Get the Miwok translation from the currentWord object and set this text on
+        // Find the TextView in the list_item.xml layout with the ID name_text_view.
+        TextView marsTextView = (TextView) listItemView.findViewById(R.id.name_text_view);
+        // Get the Miwok translation from the currentPlace object and set this text on
         // the Miwok TextView.
-        miwokTextView.setText(currentWord.getMiwokTranslation());
+        marsTextView.setText(currentPlace.getNameOfPlace());
 
-        // Find the TextView in the list_item.xml layout with the ID default_text_view.
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.default_text_view);
-        // Get the default translation from the currentWord object and set this text on
+        // Find the TextView in the list_item.xml layout with the ID description_text_view.
+        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.description_text_view);
+        // Get the default translation from the currentPlace object and set this text on
         // the default TextView.
-        defaultTextView.setText(currentWord.getDefaultTranslation());
+        defaultTextView.setText(currentPlace.getDescriptionOfPlace());
 
         // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
         // Check if an image is provided for this word or not
-        if (currentWord.hasImage()) {
+        if (currentPlace.hasImage()) {
             // If an image is available, display the provided image based on the resource ID
-            imageView.setImageResource(currentWord.getImageResourceId());
+            imageView.setImageResource(currentPlace.getImageResourceId());
             // Make sure the view is visible
             imageView.setVisibility(View.VISIBLE);
         } else {

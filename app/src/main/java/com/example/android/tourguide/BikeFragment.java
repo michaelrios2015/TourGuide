@@ -1,10 +1,9 @@
-package com.example.android.miwok;
+package com.example.android.tourguide;
 
 
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 /**
  * {@link Fragment} that displays a list of number vocabulary words.
  */
-public class NumbersFragment extends Fragment {
+public class BikeFragment extends Fragment {
 
     /** Handles playback of all the sound files */
     private MediaPlayer mMediaPlayer;
@@ -67,7 +66,7 @@ public class NumbersFragment extends Fragment {
         }
     };
 
-    public NumbersFragment() {
+    public BikeFragment() {
         // Required empty public constructor
     }
 
@@ -79,31 +78,30 @@ public class NumbersFragment extends Fragment {
         // Create and setup the {@link AudioManager} to request audio focus
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
-        // Create a list of words
-        // Create a list of words
-        final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one", "lutti", R.drawable.number_one, R.raw.number_one));
-        words.add(new Word("two", "otiiko", R.drawable.number_two, R.raw.number_two));
-        words.add(new Word("three", "tolookosu", R.drawable.number_three, R.raw.number_three));
-        words.add(new Word("four", "oyyisa", R.drawable.number_four, R.raw.number_four));
-        words.add(new Word("five", "massokka", R.drawable.number_five, R.raw.number_five));
-        words.add(new Word("six", "temmokka", R.drawable.number_six, R.raw.number_six));
-        words.add(new Word("seven", "kenekaku", R.drawable.number_seven, R.raw.number_seven));
-        words.add(new Word("eight", "kawinta", R.drawable.number_eight, R.raw.number_eight));
-        words.add(new Word("nine", "wo’e", R.drawable.number_nine, R.raw.number_nine));
-        words.add(new Word("ten", "na’aacha", R.drawable.number_ten, R.raw.number_ten));
+        // Create a list of places
+        final ArrayList<Place> places = new ArrayList<Place>();
+        places.add(new Place("very pretty!!", "Sceneic Bike path", R.drawable.number_one, R.raw.number_one));
+        places.add(new Place("Realy ugly", "Ugly Bike path", R.drawable.number_two, R.raw.number_two));
+        places.add(new Place("Kind of nice", "that wierd bike path", R.drawable.number_three, R.raw.number_three));
+        places.add(new Place("It's got things", "the kind of sort of bike path", R.drawable.number_four, R.raw.number_four));
+        places.add(new Place("not really that good", "is it a bike bath", R.drawable.number_five, R.raw.number_five));
+        places.add(new Place("six", "temmokka", R.drawable.number_six, R.raw.number_six));
+        places.add(new Place("seven", "kenekaku", R.drawable.number_seven, R.raw.number_seven));
+        places.add(new Place("eight", "kawinta", R.drawable.number_eight, R.raw.number_eight));
+        places.add(new Place("nine", "wo’e", R.drawable.number_nine, R.raw.number_nine));
+        places.add(new Place("ten", "na’aacha", R.drawable.number_ten, R.raw.number_ten));
 
-        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
+        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.category_numbers);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // word_list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // Make the {@link ListView} use the {@link PlaceAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Place} in the list.
         listView.setAdapter(adapter);
 
         // Set a click listener to play the audio when the list item is clicked on
@@ -114,8 +112,8 @@ public class NumbersFragment extends Fragment {
                 // play a different sound file
                 releaseMediaPlayer();
 
-                // Get the {@link Word} object at the given position the user clicked on
-                Word word = words.get(position);
+                // Get the {@link Place} object at the given position the user clicked on
+                Place place = places.get(position);
 
                 // Request audio focus so in order to play the audio file. The app needs to play a
                 // short audio file, so we will request audio focus with a short amount of time
@@ -127,8 +125,8 @@ public class NumbersFragment extends Fragment {
                     // We have audio focus now.
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
-                    // with the current word
-                    mMediaPlayer = MediaPlayer.create(getActivity(), word.getAudioResourceId());
+                    // with the current place
+                    mMediaPlayer = MediaPlayer.create(getActivity(), place.getAudioResourceId());
 
                     // Start the audio file
                     mMediaPlayer.start();
