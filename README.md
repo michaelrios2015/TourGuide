@@ -1,5 +1,9 @@
-Miwok App
+Fork of Miwok App being morphed into Tour Guide of MARS!!!
 ===================================
+
+Best tour guide of mars on the market 
+
+The stuff below does not always apply now but trying to give credit here folks :)
 
 This app displays lists of vocabulary places for the user to learn the Miwok language.
 Used in a Udacity course in the Beginning Android Nanodegree.
