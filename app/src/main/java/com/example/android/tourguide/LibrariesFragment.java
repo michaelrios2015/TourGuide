@@ -87,16 +87,11 @@ public class LibrariesFragment extends Fragment {
         places.add(new Place("My name is...", "oyaaset...", R.raw.phrase_my_name_is));
         places.add(new Place("How are you feeling?", "michәksәs?", R.raw.phrase_how_are_you_feeling));
         places.add(new Place("I’m feeling good.", "kuchi achit", R.raw.phrase_im_feeling_good));
-        places.add(new Place("Are you coming?", "әәnәs'aa?", R.raw.phrase_are_you_coming));
-        places.add(new Place("Yes, I’m coming.", "hәә’ әәnәm", R.raw.phrase_yes_im_coming));
-        places.add(new Place("I’m coming.", "әәnәm", R.raw.phrase_im_coming));
-        places.add(new Place("Let’s go.", "yoowutis", R.raw.phrase_lets_go));
-        places.add(new Place("Come here.", "әnni'nem", R.raw.phrase_come_here));
 
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.category_phrases);
+        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.category_libraries);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

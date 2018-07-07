@@ -86,21 +86,12 @@ public class CatsFragment extends Fragment {
         places.add(new Place("daughter", "tune", R.drawable.family_daughter, R.raw.family_daughter));
         places.add(new Place("older brother", "taachi", R.drawable.family_older_brother,
                 R.raw.family_older_brother));
-        places.add(new Place("younger brother", "chalitti", R.drawable.family_younger_brother,
-                R.raw.family_younger_brother));
-        places.add(new Place("older sister", "teṭe", R.drawable.family_older_sister,
-                R.raw.family_older_sister));
-        places.add(new Place("younger sister", "kolliti", R.drawable.family_younger_sister,
-                R.raw.family_younger_sister));
-        places.add(new Place("grandmother ", "ama", R.drawable.family_grandmother,
-                R.raw.family_grandmother));
-        places.add(new Place("grandfather", "paapa", R.drawable.family_grandfather,
-                R.raw.family_grandfather));
+
 
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.
-        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.category_family);
+        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places, R.color.category_cats);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
