@@ -30,9 +30,6 @@ public class Place {
     /** Image resource ID for the word */
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
-    /** Image resource ID for the word */
-    private int mAudioResourceId;
-
     /** Constant value that represents no image was provided for this word */
     private static final int NO_IMAGE_PROVIDED = -1;
 
@@ -43,10 +40,9 @@ public class Place {
      *
      * @param nameOfPlace the name of the place
      */
-    public Place(String descriptionOfPlace, String nameOfPlace, int audioResourceID) {
+    public Place(String descriptionOfPlace, String nameOfPlace) {
         mDescriptionOfPlace = descriptionOfPlace;
         mNameOfPlace = nameOfPlace;
-        mAudioResourceId = audioResourceID;
     }
 
     /**
@@ -59,12 +55,10 @@ public class Place {
      *
      */
 
-
-    public Place(String defaultDescription, String nameOfPlace, int imageResourceId, int audioResourceID) {
+    public Place(String defaultDescription, String nameOfPlace, int imageResourceId) {
         mDescriptionOfPlace = defaultDescription;
         mNameOfPlace = nameOfPlace;
         mImageResourceId = imageResourceId;
-        mAudioResourceId = audioResourceID;
     }
 
     /**
@@ -88,9 +82,6 @@ public class Place {
         return mImageResourceId;
     }
 
-    public int getAudioResourceId() {
-        return mAudioResourceId;
-    }
     /**
      * Returns whether or not there is an image for this place.
      */
@@ -104,7 +95,6 @@ public class Place {
                 "mDescriptionOfPlace='" + mDescriptionOfPlace + '\'' +
                 ", mNameOfPlace='" + mNameOfPlace + '\'' +
                 ", mImageResourceId=" + mImageResourceId +
-                ", mAudioResourceId=" + mAudioResourceId +
                 '}';
     }
 }

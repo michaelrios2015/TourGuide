@@ -19,7 +19,6 @@ import java.util.ArrayList;
  */
 public class MuseumsFragment extends Fragment {
 
-
     public MuseumsFragment() {
         // Required empty public constructor
     }
@@ -29,17 +28,14 @@ public class MuseumsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.word_list, container, false);
 
-
         // Create a list of places
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place("it's red", "The red Museum", R.drawable.color_red, R.raw.color_red));
-        places.add(new Place("it's better than red", "The dead museum", R.drawable.color_mustard_yellow,
-                R.raw.color_mustard_yellow));
-        places.add(new Place("dusty yellow", "Museum of museums", R.drawable.color_dusty_yellow,
-                R.raw.color_dusty_yellow));
-        places.add(new Place("green", "Museum cubed", R.drawable.color_green, R.raw.color_green));
-        places.add(new Place("brown", "ṭakaakki", R.drawable.color_brown, R.raw.color_brown));
-        places.add(new Place("brown", "ṭakaakki", R.drawable.color_brown, R.raw.color_brown));
+        places.add(new Place("it's red", "The red Museum"));
+        places.add(new Place("it's better than red", "The dead museum"));
+        places.add(new Place("Isn't this like the library of libraries?? Get a new joke :)", "Museum of museums"));
+        places.add(new Place("That's how we chopped it", "Museum cubed"));
+        places.add(new Place("Make some friends :)", "Museum for the lonely"));
+        places.add(new Place("Maybe it's a museum maybe it's a closet", "A place for oddities"));
 
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
@@ -55,9 +51,7 @@ public class MuseumsFragment extends Fragment {
         // {@link ListView} will display list items for each {@link Place} in the list.
         listView.setAdapter(adapter);
 
-
         return rootView;
     }
-
 
 }
