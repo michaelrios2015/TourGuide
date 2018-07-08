@@ -30,12 +30,12 @@ public class MuseumsFragment extends Fragment {
 
         // Create a list of places
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place("it's red", "The red Museum"));
-        places.add(new Place("it's better than red", "The dead museum"));
-        places.add(new Place("Isn't this like the library of libraries?? Get a new joke :)", "Museum of museums"));
-        places.add(new Place("That's how we chopped it", "Museum cubed"));
-        places.add(new Place("Make some friends :)", "Museum for the lonely"));
-        places.add(new Place("Maybe it's a museum maybe it's a closet", "A place for oddities"));
+        places.add(new Place(getString(R.string.description_museum_1), getString(R.string.name_museum_1)));
+        places.add(new Place(getString(R.string.description_museum_2), getString(R.string.name_museum_2)));
+        places.add(new Place(getString(R.string.description_museum_3), getString(R.string.name_museum_3)));
+        places.add(new Place(getString(R.string.description_museum_4), getString(R.string.name_museum_4)));
+        places.add(new Place(getString(R.string.description_museum_5), getString(R.string.name_museum_5)));
+        places.add(new Place(getString(R.string.description_museum_6), getString(R.string.name_museum_6)));
 
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The

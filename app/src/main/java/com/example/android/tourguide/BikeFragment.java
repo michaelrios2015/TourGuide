@@ -31,12 +31,12 @@ public class BikeFragment extends Fragment {
 
         // Create a list of places
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place("Very pretty!!", "Sceneic Bike path", R.drawable.big_moustache));
-        places.add(new Place("Really ugly, the dog is cute though :)", "Ugly Bike path", R.drawable.joe));
-        places.add(new Place("Kind of nice", "That weird bike path", R.drawable.circle_purple));
-        places.add(new Place("It's got things", "The kind of sort of bike path", R.drawable.number_five));
-        places.add(new Place("Not really that good", "Is it a bike bath??", R.drawable.circle));
-        places.add(new Place("Rocking this joint son", "What is a cat doing here??", R.drawable.cat));
+        places.add(new Place(getString(R.string.description_bike_1), getString(R.string.name_bike_1), R.drawable.big_moustache));
+        places.add(new Place(getString(R.string.description_bike_2), getString(R.string.name_bike_2), R.drawable.joe));
+        places.add(new Place(getString(R.string.description_bike_3), getString(R.string.name_bike_3), R.drawable.circle_purple));
+        places.add(new Place(getString(R.string.description_bike_4), getString(R.string.name_bike_4), R.drawable.number_five));
+        places.add(new Place(getString(R.string.description_bike_5), getString(R.string.name_bike_5), R.drawable.circle));
+        places.add(new Place(getString(R.string.description_bike_6), getString(R.string.name_bike_6), R.drawable.cat));
 
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The

@@ -31,12 +31,12 @@ public class CatsFragment extends Fragment {
 
         // Create a list of places
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place("Man that cat will kill you", "WAR Cat"));
-        places.add(new Place("Hairless", "Furry cat"));
-        places.add(new Place("Chillin' like a villain", "The cat from the bike Path"));
-        places.add(new Place("I like pets :)", "Kitty cat"));
-        places.add(new Place("Cooking with skillz", "Hibachi Cat"));
-        places.add(new Place("Don't cross me Sucka!!", "Laser Cat"));
+        places.add(new Place(getString(R.string.description_cat_1), getString(R.string.name_cat_1)));
+        places.add(new Place(getString(R.string.description_cat_2), getString(R.string.name_cat_2)));
+        places.add(new Place(getString(R.string.description_cat_3), getString(R.string.name_cat_3)));
+        places.add(new Place(getString(R.string.description_cat_4), getString(R.string.name_cat_4)));
+        places.add(new Place(getString(R.string.description_cat_5), getString(R.string.name_cat_5)));
+        places.add(new Place(getString(R.string.description_cat_6), getString(R.string.name_cat_6)));
 
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The

@@ -30,4 +30,58 @@
 
     <!-- Category name for the vocabulary places for family members [CHAR LIMIT=20] -->
     <string name="cats">CAts of MArs!!</string>
+    <string name="description_library_1">Only dogS, that\'s wierd</string>
+    <string name="description_library_2">Very meta (lica)</string>
+    <string name="description_library_3">What swashbucklers need a library too</string>
+    <string name="description_library_4">We got all the tings</string>
+    <string name="description_library_5">I guess it\'s not lost anymore</string>
+    <string name="description_library_6">The best colon around ;)</string>
+    <string name="description_library_7">Kind of like the library og Congress but more froggy</string>
+    <string name="name_library_1">Library of CaTs</string>
+    <string name="name_library_2">Library of LibraRies</string>
+    <string name="name_library_3">Swashbuckling Library</string>
+    <string name="name_library_4">Library of tings</string>
+    <string name="name_library_5">Library of the Lost</string>
+    <string name="name_library_6">Semicolon</string>
+    <string name="name_library_7">Library of Frogress</string>
+    <string name="description_bike_1">Very pretty!!</string>
+    <string name="description_bike_2">Really ugly, the dog is cute though :)</string>
+    <string name="description_bike_3">Kind of nice</string>
+    <string name="description_bike_4">It\'s got things</string>
+    <string name="description_bike_5">Not really that good</string>
+    <string name="description_bike_6">Rocking this joint son</string>
+    <string name="name_bike_1">Sceneic Bike path</string>
+    <string name="name_bike_2">Ugly Bike path</string>
+    <string name="name_bike_3">That weird bike path</string>
+    <string name="name_bike_4">The kind of sort of bike path</string>
+    <string name="name_bike_5">Is it a bike bath??</string>
+    <string name="name_bike_6">What is a cat doing here??</string>
+    <string name="name_cat_1">WAR Cat</string>
+    <string name="name_cat_2">Furry cat</string>
+    <string name="name_cat_3">The cat from the bike Path</string>
+    <string name="name_cat_4">Kitty cat</string>
+    <string name="name_cat_5">Hibachi Cat</string>
+    <string name="name_cat_6">Laser Cat</string>
+    <string name="description_cat_1">Man that cat will kill you</string>
+    <string name="description_cat_2">Hairless</string>
+    <string name="description_cat_3">Chillin\' like a villain</string>
+    <string name="description_cat_4">I like pets :)</string>
+    <string name="description_cat_5">Cooking with skillz</string>
+    <string name="description_cat_6">Don\'t cross me Sucka!!</string>
+    <string name="description_museum_1">it\'s red</string>
+    <string name="description_museum_2">it\'s better than red</string>
+    <string name="description_museum_3">Isn\'t this like the library of libraries?? Get a new joke :)</string>
+    <string name="description_museum_4">That\'s how we chopped it</string>
+    <string name="description_museum_5">Make some friends :)</string>
+    <string name="description_museum_6">Maybe it\'s a museum maybe it\'s a closet</string>
+    <string name="name_museum_1">The red Museum</string>
+    <string name="name_museum_2">The dead museum</string>
+    <string name="name_museum_3">Museum of museums</string>
+    <string name="name_museum_4">Museum cubed</string>
+    <string name="name_museum_5">Museum for the lonely</string>
+    <string name="name_museum_6">A place for oddities</string>
+    <string name="string_image">, mImageResourceId=</string>
+    <string name="string_name">, mNameOfPlace=\'</string>
+    <string name="string_place">mDescriptionOfPlace=\'</string>
+    <string name="string_place_1">Place{</string>
 </resources>

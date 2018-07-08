@@ -30,13 +30,13 @@ public class LibrariesFragment extends Fragment {
 
         // Create a list of places
         final ArrayList<Place> places = new ArrayList<Place>();
-        places.add(new Place("Only dogs, that's wierd", "Library of Cats"));
-        places.add(new Place("Very meta (lica)", "Library of Libraries"));
-        places.add(new Place("What swashbucklers need a library too", "Swashbuckling Library"));
-        places.add(new Place("We got all the tings", "Library of tings"));
-        places.add(new Place("I guess it's not lost anymore", "Library of the Lost"));
-        places.add(new Place("The best colon around ;)", "Semicolon"));
-        places.add(new Place("Kind of like the library og Congress but more froggy", "Library of Frogress"));
+        places.add(new Place(getString(R.string.description_library_1), getString(R.string.name_library_1)));
+        places.add(new Place(getString(R.string.description_library_2), getString(R.string.name_library_2)));
+        places.add(new Place(getString(R.string.description_library_3), getString(R.string.name_library_3)));
+        places.add(new Place(getString(R.string.description_library_4), getString(R.string.name_library_4)));
+        places.add(new Place(getString(R.string.description_library_5), getString(R.string.name_library_5)));
+        places.add(new Place(getString(R.string.description_library_6), getString(R.string.name_library_6)));
+        places.add(new Place(getString(R.string.description_library_7), getString(R.string.name_library_7)));
 
         // Create an {@link PlaceAdapter}, whose data source is a list of {@link Place}s. The
         // adapter knows how to create list items for each item in the list.

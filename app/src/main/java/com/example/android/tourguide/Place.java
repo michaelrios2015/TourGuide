@@ -91,10 +91,10 @@ public class Place {
 
     @Override
     public String toString() {
-        return "Place{" +
-                "mDescriptionOfPlace='" + mDescriptionOfPlace + '\'' +
-                ", mNameOfPlace='" + mNameOfPlace + '\'' +
-                ", mImageResourceId=" + mImageResourceId +
+        return ".getString(R.string.string_place_1)" +
+                ".getString(R.string.string_place)" + mDescriptionOfPlace + '\'' +
+                ".getString(R.string.string_name)" + mNameOfPlace + '\'' +
+                ".getString(R.string.string_image)" + mImageResourceId +
                 '}';
     }
 }
