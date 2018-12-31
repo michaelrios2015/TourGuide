@@ -1,6 +1,8 @@
 Fork of Miwok App being morphed into Tour Guide of MARS!!!
 ===================================
 
+Create an app to guide a user around a city or location of your choice!
+
 Best tour guide of mars on the market 
 
 The stuff below does not always apply now but trying to give credit here folks :)
